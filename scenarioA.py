@@ -33,12 +33,10 @@ def quickFit(modelName, model, X, y):
     y_pred = model.predict(X_test)
 
     print('\n----- ' + modelName + ' -----')
+    print(confusion_matrix(y_test, y_pred))
     print('Accuracy score: ' + str(accuracy_score(y_test, y_pred)))
     print('Precision score: ' + str(precision_score(y_test, y_pred)))
     print('Recall score: ' + str(recall_score(y_test, y_pred)))
-
-    print("----- Confusion Matrix -----")
-    print(confusion_matrix(y_test, y_pred))
 
 #####################################################
 ## Importing and cleaning data
